@@ -11,6 +11,7 @@ namespace ServiceHost
         Manager SaveApplication(Manager manager);
     }
 
+    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall, ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class MyService : IMyService
     {
         public Manager SaveApplication(Manager manager)
