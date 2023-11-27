@@ -1,7 +1,7 @@
 ﻿using ClientDomain;
+using Common;
 using System.ServiceModel;
 using System.ServiceModel.Channels;
-using Common;
 
 namespace ClientApp.Service_Contracts
 {
@@ -9,6 +9,7 @@ namespace ClientApp.Service_Contracts
     public interface IMyService
     {
         [OperationContract]
+        //[ReferenceTrackingBehavior]
         [ReferencePreservingDataContractFormat]
         Task<Manager> SaveApplication(Manager manager);
     }

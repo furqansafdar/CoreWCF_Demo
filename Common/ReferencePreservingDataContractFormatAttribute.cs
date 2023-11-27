@@ -1,9 +1,12 @@
-﻿using System;
+﻿//using CoreWCF.Channels;
+//using CoreWCF.Description;
+//using CoreWCF.Dispatcher;
+using System;
 using System.Collections.Generic;
-using CoreWCF.Channels;
-using CoreWCF.Description;
-using CoreWCF.Dispatcher;
 using System.Runtime.Serialization;
+using System.ServiceModel.Channels;
+using System.ServiceModel.Description;
+using System.ServiceModel.Dispatcher;
 using System.Xml;
 
 namespace Common

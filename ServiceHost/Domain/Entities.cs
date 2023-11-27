@@ -2,7 +2,19 @@
 {
     [Serializable]
     [DataContract]
-    public abstract class Person
+    public abstract class EntityBase : IExtensibleDataObject
+    {
+        #region IExtensibleDataObject Members
+
+        [field: NonSerialized]
+        public ExtensionDataObject ExtensionData { get; set; }
+
+        #endregion
+    }
+
+    [Serializable]
+    [DataContract]
+    public abstract class Person : EntityBase
     {
         [DataMember] public string Name { get; set; }
     }

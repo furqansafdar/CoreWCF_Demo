@@ -7,6 +7,7 @@ namespace ServiceHost
     public interface IMyService
     {
         [OperationContract]
+        //[ReferenceTrackingBehavior]
         [ReferencePreservingDataContractFormat]
         Manager SaveApplication(Manager manager);
     }
